@@ -128,6 +128,218 @@ body {
     transform: translateY(-1px);
 }
 
+/* Hero Background */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--dark-blue) 0%, #2d4a72 100%);
+    color: var(--white);
+    padding: clamp(2.5rem, 7vw, 4.5rem) 0 clamp(0.8rem, 2.5vw, 1.8rem);
+    text-align: center;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Services Background */
+.services {
+    position: relative;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.services .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Transport Images */
+.transport-image {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.transport-image img {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--medium-gray);
+}
+
+/* Order Button */
+.btn-order {
+    background: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-order:hover {
+    background: var(--mint);
+    color: var(--dark-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--dark-blue);
+}
+
+.modal-content h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.modal-content > p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+}
+
+.modal-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-contact-item {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--mint);
+}
+
+.modal-contact-item h4 {
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.modal-phone,
+.modal-tg,
+.modal-email {
+    display: block;
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0;
+    transition: color 0.3s ease;
+}
+
+.modal-phone:hover,
+.modal-tg:hover,
+.modal-email:hover {
+    color: var(--mint);
+}
+
+.modal-note {
+    background: var(--beige);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--mint);
+    font-size: 0.85rem;
+}
+
+.modal-note p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20% auto;
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .transport-image img {
+        height: 150px;
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 10% auto;
+        padding: 1rem;
+    }
+
+    .modal-contacts {
+        gap: 1rem;
+    }
+
+    .modal-contact-item {
+        padding: 0.8rem;
+    }
+
+    .transport-image img {
+        height: 120px;
+        max-width: 180px;
+    }
+}
+
 /* Navigation - внутри header с выдвижной шторкой */
 .nav {
     padding: 0.15rem 0;
@@ -173,6 +385,8 @@ body {
     color: var(--dark-blue);
     background: var(--beige);
 }
+
+
 
 /* Кнопка бургер-меню для мобильных */
 .burger-menu {

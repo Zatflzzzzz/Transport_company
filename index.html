@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Основные мета-теги -->
     <title>Грузоперевозки в Минске 🚚 | Квартирные и офисные переезды | Перевозки Профи</title>
     <meta name="description" content="✅ Профессиональные грузоперевозки в Минске. Квартирные и офисные переезды, вывоз мусора, перевозка мебели. Цены от 35 руб/час. Звоните +375295023325">
     <meta name="keywords" content="грузоперевозки Минск, переезд Минск, квартирный переезд, офисный переезд, вывоз мусора Минск, перевозка мебели, услуги грузчиков, транспортные услуги Минск">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Грузоперевозки в Минске | Перевозки Профи .">
     <meta property="og:description" content="Профессиональные грузоперевозки в Минске. Квартирные и офисные переезды, вывоз мусора. Более 8 лет опыта.">
     <meta property="og:type" content="website">
@@ -18,7 +16,7 @@
     <meta name="yandex-verification" content="4c5419bfc4da6ded" />
 
     <!-- Каноническая ссылка -->
-    <link rel="canonical" href="https://perevozki-profi.netlify.app">
+    <link rel="canonical" href="https://perevozki-profi.by">
 
     <!-- Schema.org микроразметка -->
     <script type="application/ld+json">
@@ -27,7 +25,7 @@
             "@type": "LocalBusiness",
             "name": "Перевозки Профи",
             "description": "Грузоперевозки в Минске и Беларуси",
-            "url": "https://perevozki-profi.netlify.app",
+            "url": "https://perevozki-profi.by",
             "telephone": "+375-29-502-33-25",
             "address": {
                 "@type": "PostalAddress",
@@ -41,6 +39,38 @@
 
     <!-- Фавикон -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚚</text></svg>">
+
+    <style>
+
+        .services-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/img/00ec8e86-921a-4dd2-ab7f-8e52964039bf.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/img/photo_2025-11-02_16-00-51.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+    </style>
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -81,6 +111,7 @@
 </nav>
 
 <section id="home" class="hero">
+    <div class="hero-background"></div>
     <div class="container">
         <div class="hero-content">
             <h1>Профессиональные грузоперевозки в Минске</h1>
@@ -130,6 +161,7 @@
 
 <!-- Services Section -->
 <section id="services" class="services">
+    <div class="services-background"></div>
     <div class="container">
         <h2>Наши услуги по грузоперевозкам в Минске</h2>
         <div class="services-grid">
@@ -224,6 +256,9 @@
         <div class="transport-grid">
             <!-- Микроавтобус -->
             <article class="transport-card" itemscope itemtype="https://schema.org/Product">
+                <div class="transport-image">
+                    <img src="assets/img/микроавтобус.png" alt="Микроавтобус для перевозок" loading="lazy">
+                </div>
                 <div class="transport-header">
                     <h3 itemprop="name">Микроавтобус</h3>
                     <div class="transport-specs">
@@ -254,14 +289,15 @@
                     </ul>
                 </div>
 
-                <div class="transport-advantage">
-                    <strong>Преимущество:</strong> заезд во дворы с низкой аркой
-                </div>
+                <button class="btn-order" data-vehicle="Микроавтобус">Заказать сейчас</button>
             </article>
 
             <!-- Мебельный фургон -->
             <article class="transport-card popular" itemscope itemtype="https://schema.org/Product">
                 <div class="popular-badge">Популярный</div>
+                <div class="transport-image">
+                    <img src="assets/img/Мебельный%20фургон.png" alt="Мебельный фургон для переездов" loading="lazy">
+                </div>
                 <div class="transport-header">
                     <h3 itemprop="name">Мебельный фургон</h3>
                     <div class="transport-specs">
@@ -291,10 +327,14 @@
                         <li>Перевозка бытовой техники</li>
                     </ul>
                 </div>
+                <button class="btn-order" data-vehicle="Мебельный фургон">Заказать сейчас</button>
             </article>
 
             <!-- Грузовик -->
             <article class="transport-card" itemscope itemtype="https://schema.org/Product">
+                <div class="transport-image">
+                    <img src="assets/images/truck.jpg" alt="Грузовик для крупных перевозок" loading="lazy">
+                </div>
                 <div class="transport-header">
                     <h3 itemprop="name">Грузовик</h3>
                     <div class="transport-specs">
@@ -325,16 +365,8 @@
                         <li>Перевозка любой техники и оборудования</li>
                     </ul>
                 </div>
+                <button class="btn-order" data-vehicle="Грузовик">Заказать сейчас</button>
             </article>
-        </div>
-
-        <div class="transport-footer">
-            <div class="call-cta">
-                <h3>Выберите подходящий транспорт и звоните!</h3>
-                <a href="tel:+375295023325" class="btn-call-large">+375295023325</a>
-                <a href="tel:+375296039559" class="btn-call-large">+375296039559</a>
-                <p>Круглосуточно, без выходных</p>
-            </div>
         </div>
     </div>
 </section>
@@ -467,6 +499,37 @@
         </div>
     </div>
 </footer>
-Verification: 4c5419bfc4da6ded
+
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3>Заказать грузоперевозку</h3>
+        <p>Выберите удобный способ связи:</p>
+        <div class="modal-contacts">
+            <div class="modal-contact-item">
+                <h4>📞 Телефон</h4>
+                <a href="tel:+375295023325" class="modal-phone">+375 (29) 502-33-25</a>
+                <a href="tel:+375296039559" class="modal-phone">+375 (29) 603-95-59</a>
+            </div>
+            <div class="modal-contact-item">
+                <h4>📱 Telegram</h4>
+                <a href="https://t.me/gruzoperevozki_profi" class="modal-tg" target="_blank">
+                    @gruzoperevozki_profi
+                </a>
+            </div>
+            <div class="modal-contact-item">
+                <h4>📧 Email</h4>
+                <a href="mailto:transportationprofessionalss@gmail.com" class="modal-email">
+                    transportationprofessionalss@gmail.com
+                </a>
+            </div>
+        </div>
+        <div class="modal-note">
+            <p><strong>Укажите при обращении:</strong> выбранный транспорт, адреса, примерный объем груза</p>
+        </div>
+    </div>
+</div>
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
