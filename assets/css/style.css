@@ -983,6 +983,8 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
+    margin-bottom: 20px;
+
 }
 
 .note-card {
@@ -990,7 +992,7 @@ h2 {
     padding: 1rem;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    border-left: 3px solid #3498db;
+    border-bottom: 3px solid #3498db;
 }
 
 .note-card h4 {
