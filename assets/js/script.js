@@ -17,3 +17,7 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
+
+document.querySelector('.btn-callback').addEventListener('click', function() {
+    document.getElementById('orderModal').style.display = 'block';
+});
