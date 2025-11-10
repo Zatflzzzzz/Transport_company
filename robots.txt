@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://perevozki-profi.by/sitemap.xml
